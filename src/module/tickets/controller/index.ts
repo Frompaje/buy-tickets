@@ -1,9 +1,30 @@
-import { Body, Controller } from '@nestjs/common';
-import { create } from 'domain';
+import {
+  Body,
+  ConflictException,
+  Controller,
+  Logger,
+  Post,
+} from '@nestjs/common';
+import { CreateTicketDto } from '../dto/createTicketDto';
+import { CreateTicketUseCase } from '../useCase/createTicketUseCase';
 
-@Controller()
+@Controller('ticket')
 export class TicketController {
-  constructor() {}
+  private readonly logger = new Logger(TicketController.name);
 
-  async create(@Body body: CreateTicketDto) {}
+  constructor(private readonly createTicketUseCase: CreateTicketUseCase) {}
+
+  @Post()
+  async create(@Body() body: CreateTicketDto) {
+    this.logger.log(`Nome do ticket ; ${body.nameTitle}`);
+    try {
+      const result = await this.createTicketUseCase.execute(body);
+
+      this.logger.log(`Ticket Criado com sucesso!`);
+      return result;
+    } catch (erro) {
+      this.logger.error(`Erro ao criar ticket  ${erro}`);
+      throw new ConflictException(erro.message);
+    }
+  }
 }
