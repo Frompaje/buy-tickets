@@ -1,0 +1,9 @@
+services:
+  buyTicket:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=postgre
+      - POSTGRESQL_PASSWORD=postgre
+      - POSTGRESQL_DATABASE=apicruddev

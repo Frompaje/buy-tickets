@@ -9,8 +9,13 @@ export class CreateTicketUseCase {
 
   async execute(body: CreateTicketDto) {
     try {
+      this.logger.log(`Criando ticket ${body.nameTitle}`);
+      return {
+        message: 'Ticket criado com sucesso',
+        data: body,
+      };
     } catch (erro) {
-      this;
+      this.logger.error(`Erro ao criar ticket  ${erro}`);
     }
   }
 }
