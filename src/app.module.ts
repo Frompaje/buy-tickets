@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { TicketController } from './module/tickets/controller';
+import { TicketModule } from './module/tickets/ticket.module';
 
 @Module({
-  controllers: [TicketController],
+  imports: [TicketModule],
 })
 export class AppModule {}
