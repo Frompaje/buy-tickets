@@ -1,9 +1,10 @@
 import { Inject } from '@nestjs/common';
 import { drizzle } from 'drizzle-orm/node-postgres';
+import { tickets } from 'src/db/ticket';
 
 type Input = {
   nameTitle: string;
-  value: number;
+  price: number;
   caterogy: string;
 };
 
