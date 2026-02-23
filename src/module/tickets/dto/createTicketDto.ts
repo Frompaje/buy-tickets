@@ -7,7 +7,7 @@ export class CreateTicketDto {
 
   @IsNumber()
   @IsNotEmpty()
-  value: number;
+  price: number;
 
   @IsNumber()
   @IsNotEmpty()

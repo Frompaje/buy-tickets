@@ -1,6 +1,6 @@
 import { Logger } from '@nestjs/common';
 import { CreateTicketDto } from '../dto/createTicketDto';
-import { CreateTicketRepository } from 'src/repositories/createTicketRepository';
+import { CreateTicketRepository } from 'src/module/tickets/repositories/createTicketRepository';
 
 export class CreateTicketUseCase {
   private readonly logger = new Logger(CreateTicketUseCase.name);
@@ -13,7 +13,7 @@ export class CreateTicketUseCase {
       this.logger.log(`Criando ticket ${body.nameTitle}`);
 
       this.createTicketRepository.execute(body);
-      
+
       return {
         message: 'Ticket criado com sucesso',
         data: body,
