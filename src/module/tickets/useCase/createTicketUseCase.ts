@@ -1,7 +1,8 @@
-import { Logger } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { CreateTicketDto } from '../dto/createTicketDto';
 import { CreateTicketRepository } from 'src/module/tickets/repositories/createTicketRepository';
 
+@Injectable()
 export class CreateTicketUseCase {
   private readonly logger = new Logger(CreateTicketUseCase.name);
   constructor(
