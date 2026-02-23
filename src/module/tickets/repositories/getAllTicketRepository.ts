@@ -9,6 +9,6 @@ export class GetAllTicketRepository {
   ) {}
 
   async execute() {
-    await this.db.select().from(tickets);
+    return await this.db.select().from(tickets);
   }
 }
