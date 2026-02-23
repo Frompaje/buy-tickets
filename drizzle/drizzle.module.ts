@@ -1,6 +1,7 @@
-import { Module } from '@nestjs/common';
+import { Global, Module } from '@nestjs/common';
 import { createDrizzle } from './index';
 
+@Global()
 @Module({
   providers: [
     {

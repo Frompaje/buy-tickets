@@ -8,6 +8,20 @@
       "when": 1771814281037,
       "tag": "0000_create_ticket_table",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1771870321314,
+      "tag": "0001_update_ticket_table",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1771870371532,
+      "tag": "0002_update_ticket_table",
+      "breakpoints": true
     }
   ]
 }

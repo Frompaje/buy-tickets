@@ -21,6 +21,7 @@ export class CreateTicketUseCase {
       };
     } catch (erro) {
       this.logger.error(`Erro ao criar ticket  ${erro}`);
+      throw erro;
     }
   }
 }
