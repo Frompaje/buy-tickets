@@ -5,7 +5,7 @@ import { tickets } from 'src/db/ticket';
 type Input = {
   nameTitle: string;
   price: number;
-  caterogy: string;
+  category: string;
 };
 
 export class CreateTicketRepository {

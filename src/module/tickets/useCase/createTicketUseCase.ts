@@ -12,11 +12,11 @@ export class CreateTicketUseCase {
     try {
       this.logger.log(`Criando ticket ${body.nameTitle}`);
 
-      this.createTicketRepository.execute(body);
+      const result = await this.createTicketRepository.execute(body);
 
       return {
         message: 'Ticket criado com sucesso',
-        data: body,
+        data: result,
       };
     } catch (erro) {
       this.logger.error(`Erro ao criar ticket  ${erro}`);
