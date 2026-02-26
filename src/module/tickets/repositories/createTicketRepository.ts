@@ -9,6 +9,9 @@ export class CreateTicketRepository {
   ) {}
 
   async execute(body: CreateTicketDto) {
-    return await this.db.insert(tickets).values(body).returning();
+    return await this.db.insert(tickets).values(body).returning({
+      title: tickets.title,
+      created_at: tickets.created_at,
+    });
   }
 }

@@ -29,6 +29,20 @@
       "when": 1772126561087,
       "tag": "0003_update_ticket_table_for_new_columns",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1772127880309,
+      "tag": "0004_update_ticket_table_change_id",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1772127929311,
+      "tag": "0005_update_ticket_table_for_new_columns",
+      "breakpoints": true
     }
   ]
 }
