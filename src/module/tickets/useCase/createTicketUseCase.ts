@@ -11,7 +11,7 @@ export class CreateTicketUseCase {
 
   async execute(body: CreateTicketDto) {
     try {
-      this.logger.log(`Criando ticket ${body.nameTitle}`);
+      this.logger.log(`Criando ticket ${body.title}`);
 
       const result = await this.createTicketRepository.execute(body);
 

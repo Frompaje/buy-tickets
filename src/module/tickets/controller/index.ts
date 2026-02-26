@@ -21,7 +21,7 @@ export class TicketController {
 
   @Post()
   async create(@Body() body: CreateTicketDto) {
-    this.logger.log(`Nome do ticket ; ${body.nameTitle}`);
+    this.logger.log(`Nome do ticket ; ${body.title}`);
     try {
       const result = await this.createTicketUseCase.execute(body);
 
